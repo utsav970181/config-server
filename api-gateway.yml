@@ -11,14 +11,14 @@ spring:
     gateway:
       routes:
         - id: customer-service
-          uri: lb://CUSTOMER
+          uri: lb://customer
           predicates:
             - Path=/customer/**
           filters:
             - StripPrefix=1
 
         - id: account-service
-          uri: lb://ACCOUNT
+          uri: lb://customer
           predicates:
             - Path=/account/**
           filters:
