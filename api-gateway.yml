@@ -15,11 +15,11 @@ spring:
           predicates:
             - Path=/customer/**
           filters:
-            - StripPrefix=1
+            - StripPrefix=0
 
         - id: account
           uri: lb://ACCOUNT
           predicates:
             - Path=/account/**
           filters:
-            - StripPrefix=1
+            - StripPrefix=0
